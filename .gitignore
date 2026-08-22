@@ -1,0 +1,62 @@
+# ─────────────────────────────────────────────
+# 内容边界（本仓库是 public，这一段最重要）
+#
+# 53 原始资源包在仓库外（d:\杂\家教\【五三】26数学北京版\），
+# 脚本按需读取，本来就不进仓库。
+# 下面这些是「摄取之后的产物」，同样含 53 的题目原文与原图，
+# 公开仓库里一律不提交。要在组内同步，走网盘或私有仓库。
+# ─────────────────────────────────────────────
+
+kb/                       # 摄取出来的知识库：题目原文、精讲册重排内容、原图
+materials/                # 老师自己的大招与二级结论（这是你的核心资产，别公开）
+handouts/*/sections/      # 讲义正文，逐字包含 53 的题目
+handouts/*/images/        # 讲义插图，多数来自 53
+handouts/*/out/           # 编译出来的学生版 / 教师版 PDF
+
+# 保留在版本库里的：handouts/*/spec.yaml（任务单）、outline.md（大纲）、
+# main.tex（只做 \input，不含内容）。它们是流程本身，不含题目原文。
+
+# ── Node / 前端 ──
+node_modules/
+dist/
+.vite/
+*.local
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+
+# ── LaTeX 编译中间产物 ──
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+
+# ── MinerU / 摄取中间产物 ──
+*.middle.json
+*.content_list.json
+.mineru_cache/
+
+# ── 系统与编辑器 ──
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
